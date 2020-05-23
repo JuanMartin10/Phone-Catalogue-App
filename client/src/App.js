@@ -1,21 +1,30 @@
-import React, { Fragment, useEffect } from 'react';
-import axios from 'axios'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+// Redux
+import { Provider } from 'react-redux'
+import store from './store'
+
+// Components
+import List from './components/List'
+import PhoneDetails from './components/PhoneDetails'
+
 
 function App() {
 
-  useEffect(() => {
-    const getApi = async () => {
-      const phones = await axios.get('http://localhost:4000/phones')
-      console.log(phones.data)
-    }
-    getApi()
-
-
-  }, [])
   return (
-    <Fragment>
-      <p>Hola Phones</p>
-    </Fragment>
+    <Router>
+
+      <Provider store={store}>
+
+        <Switch>
+          <Route exact path='/' component={List} />
+          <Route exact path='/:id' component={PhoneDetails} />
+        </Switch>
+
+      </Provider>
+    </Router>
+
   );
 }
 
