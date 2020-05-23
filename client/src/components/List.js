@@ -21,7 +21,6 @@ const List = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        console.log('use effect de list')
         const getData = () => dispatch(getDataPhones())
         getData()
         // eslint-disable-next-line
