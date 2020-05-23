@@ -12,13 +12,17 @@ git clone https://github.com/JuanMrtt/Phone-Catalogue-App
 
 #### First One:
 ```sh
+cd Phone-Catalogue-App/
 cd server
+npm i
 npm run dev
 ```
 
 #### Second One:
 ```sh
+cd Phone-Catalogue-App/
 cd client
+npm i
 npm start
 ```
 
