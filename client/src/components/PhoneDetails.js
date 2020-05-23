@@ -28,7 +28,7 @@ const PhoneDetails = (props) => {
     const phones = useSelector(state => state.phones.phones)
     const idx = props.match.params.id
 
-    const phonefiltered = phones.filter(({ id }) => id === idx)[0]
+    const phonefiltered = phones.filter(({ id }) => id == idx)[0]
 
 
     if (phonefiltered) {
