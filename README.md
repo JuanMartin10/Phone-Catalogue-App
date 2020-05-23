@@ -1,6 +1,6 @@
 # Phone-Catalogue-App
 
-## Instalación
+## Installation
 
 You can run this repo with this following commands:
 
